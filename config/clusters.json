@@ -1,0 +1,24 @@
+{
+  "title": "Slurm GPU Dashboard",
+  "organization": "Research computing",
+  "maxBookingHours": 168,
+  "clusters": [
+    {
+      "id": "ATLAS",
+      "account": "research-lab",
+      "members": ["alex", "blair", "casey", "drew"],
+      "pools": [
+        { "key": "gpu", "label": "Full GPUs", "qos": null, "partitions": ["gpu"], "capacity": 16 },
+        { "key": "slices", "label": "MIG slices", "qos": null, "partitions": ["slice-small", "slice-large"], "capacity": 8 }
+      ]
+    },
+    {
+      "id": "ORION",
+      "account": "research-lab",
+      "members": ["alex", "blair", "casey", "drew"],
+      "pools": [
+        { "key": "gpu", "label": "GPUs", "qos": null, "partitions": ["gpu"], "capacity": 8 }
+      ]
+    }
+  ]
+}

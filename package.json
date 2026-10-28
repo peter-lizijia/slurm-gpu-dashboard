@@ -1,0 +1,39 @@
+{
+  "name": "slurm-gpu-dashboard",
+  "description": "GPU visibility and reservation coordination for research teams on Slurm.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test:agent": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:db": "node --test tests/database.test.mjs",
+    "test:ui": "playwright test",
+    "test": "npm run test:agent && npm run test:db",
+    "check:public": "python3 scripts/check_public.py"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.0",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10",
+    "@playwright/test": "^1.64.1",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^6.0.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^8.1.3"
+  }
+}
